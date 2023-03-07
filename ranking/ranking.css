@@ -1,0 +1,61 @@
+body {
+    background-image: url(https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1106441/retina_1708x683_cover-0327-DesignThinkingProcess_Dan_Newsletter-ebb7443c026c152a7e7c6ef42676e40a.png);
+    color: white;
+    font-size: 10px;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+#highScoreList {
+    list-style-type: decimal;
+    padding-left: 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.high-score {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 15px 40px;
+    background-color: #5dca88;
+    cursor: pointer;
+    box-shadow: 0px 7px #1a7940;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+button:active {
+    top: 7px;
+    box-shadow: none;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;  
+}
+
+#highScoreList {
+    counter-reset: li;    /* reset the counter of li */
+    list-style: none;
+}
+
+li:before {
+    color: white;
+    font-weight: bold;
+    counter-increment: li;   /* the number of li will be increased by 1*/
+    content: "No. " counter(li) " : ";      /* to add words before or after number of lists */   
+}

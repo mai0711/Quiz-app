@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My page</title>
+    <link rel="stylesheet" type="text/css" href="../home/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- <script src="../home/index.js" defer></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="loginName" style="color: greenyellow;">Welcome</h1>
+        <h1>Start the Quiz!!</h1>
+        <a class="btn" id="logout-btn" href="../home/index.html">Logout</a>
+        <a class="btn" href="../play/play.html">Play</a>
+        <a class="btn" href="../ranking/ranking.html">High Scores</a>
+    </div>
+<!-- javascript -->
+    <script>
+        const loginName = document.getElementById("loginName");
+        const getLoginName = localStorage.getItem("setName");
+        document.addEventListener('DOMContentLoaded', function() {
+        loginName.innerText = `Welcome \n ${getLoginName}`;
+        });
+
+        const logout = document.getElementById("logout-btn");
+        logout.addEventListener("click", ()=>{
+            localStorage.removeItem("email");
+            localStorage.removeItem("password");
+            localStorage.removeItem("setName");
+            localStorage.removeItem("text");
+        })
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</body>
+</html>

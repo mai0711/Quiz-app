@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../home/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="login-modal-wrapper" id="login-modal" style="display: block;">
+            <div class="modal">
+                <form id="login" class="tabcontent" style="display: block;" action="afterLogin.html">
+                    <h2>Login</h2>
+                    <label for="loginEmail">Email</label>
+                    <input type="text" name="loginEmail" id="loginEmail" placeholder="Email">
+                    <span id="emailError" class="error"></span>
+
+                    <label for="loginPassword">Password</label>
+                    <input type="password" name="loginPassword" id="loginPassword" placeholder="Password">
+                    <span id="passwordError" class="error"></span>
+
+                    <button type="button" class="action-btn" id="action-btn">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <a class="btn" href="../home/index.html">Home</a>
+            <a class="btn" href="../play/play.html">Play</a>
+            <a class="btn" href="../ranking/ranking.html">High Scores</a>
+        </div>
+    </main>
+
+    <script>
+        //to get register info
+        const actionBtn = document.getElementById("action-btn");
+        const fullName = document.getElementById("fullName");
+        const loginEmail = document.getElementById("loginEmail");
+        const loginPassword = document.getElementById("loginPassword");
+        const getName = localStorage.getItem("setName");
+        const getEmail = localStorage.getItem("email");
+        const getPassword = localStorage.getItem("password");
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loginEmail.value = getEmail;
+            loginPassword.value = getPassword;
+        });
+
+        //after click login button
+        actionBtn.addEventListener("click",()=>{
+            localStorage.setItem("setName", getName);
+            location.replace("../afterLogin/afterLogin.html");
+        })
+
+        //To close login and register page when I clicked outside of the page
+        const modal = document.getElementById("login-modal");
+        document.addEventListener("click", (e) => {
+            if(e.target == modal){
+                modal.style.display = "none";
+            }
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</body>
+</html>

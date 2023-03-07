@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy</title>
+    <link rel="stylesheet" href="play.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="play.js" defer></script>
+</head>
+<body>
+    <h1 class="level">Level : Easy</h1>
+    <div class="container">
+        <div id="game">
+            <div id="gameCounter">
+                <div id="counterItem">
+                    <p class="counterTitle">
+                        Question
+                    </p>
+                    <h1 class="counterText" id="counter"></h1>
+                </div>
+                <div id="counterItem">
+                    <p class="counterTitle">
+                        Score
+                    </p>
+                    <h1 class="counterText" id="score">
+                        0
+                    </h1>
+                </div>
+            </div>
+
+            <h2 id="question"></h2>
+            <div class="choice-container">
+                <p class="choiceNo">1.</p>
+                <p class="choice-text" data-number="1"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choiceNo">2.</p>
+                <p class="choice-text" data-number="2"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choiceNo">3.</p>
+                <p class="choice-text" data-number="3"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choiceNo">4.</p>
+                <p class="choice-text" data-number="4"></p>
+            </div>
+        </div>
+    </div>
+    <div class="btn">
+        <button class="button"><a href="../home/index.html">Home</a></button>
+        <button class="button"><a href="play.html">Start over</a></button>
+        <button class="button"><a href="level.html">Change Level</a></button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</body>
+</html>

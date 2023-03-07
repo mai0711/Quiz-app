@@ -1,0 +1,55 @@
+body {
+    background-image: url(https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1106441/retina_1708x683_cover-0327-DesignThinkingProcess_Dan_Newsletter-ebb7443c026c152a7e7c6ef42676e40a.png);
+    color: white;
+    margin-top: 200px;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    padding: 15px 40px;
+    background-color: #5dca88;
+    cursor: pointer;
+    box-shadow: 0px 7px #1a7940;
+    text-decoration: none;
+
+}
+
+button:active {
+    top: 7px;
+    box-shadow: none;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;  
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+input {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: 40px;
+    border: 2px solid green;
+    border-radius: 10px;
+}
+
+button {
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+a {
+    text-decoration: none;
+}

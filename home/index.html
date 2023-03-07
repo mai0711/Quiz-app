@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="login-modal-wrapper" id="login-modal" style="display: none;">
+            <div class="modal">
+                <form id="login" class="tabcontent">
+                    <h2>Login</h2>
+                    <label for="loginEmail">Email</label>
+                    <input type="text" name="loginEmail" id="loginEmail" placeholder="Email">
+                    <span id="emailError" class="error"></span>
+
+                    <label for="loginPassword">Password</label>
+                    <input type="password" name="loginPassword" id="loginPassword" placeholder="Password">
+                    <span id="passwordError" class="error"></span>
+                    <span id="errorMessage"></span>
+                    <button type="submit"  class="action-btn" id="loginBtn">Login</button>
+                </form>
+
+                <form id="register" class="tabcontent" action="login.html"  style="display: block;">
+                    <h2>Create an account</h2>
+                    <label for="fullName">Name</label>
+                    <input type="text" name="fullName" id="fullName" placeholder="Name">
+                    <span id="fullNameError" class="error"></span>
+
+                    <label for="registerEmail">Email</label>
+                    <input type="text" name="registerEmail" id="registerEmail" placeholder="Email">
+                    <span id="registerEmailError" class="error"></span>
+
+                    <label for="registerPassword">Password</label>
+                    <input type="password" name="registerPassword" id="registerPassword" placeholder="Password">
+                    <span id="registerPasswordError" class="error"></span>
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
+                    <span id="confirmPasswordError" class="error"></span>
+
+                    <button type="submit" class="action-btn" id="register-btn" onclick="passRegisterValue()">Register</button>
+                </form>
+                <div class="tab">
+                    <button class="tablinks active" data-tab="login">Login</button> 
+                    <button class="tablinks" data-tab="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>QUIZ GAME!!</h1>
+            <a class="btn" id="login-btn">Login / Sign Up</a>
+            <a class="btn" href="../play/level.html">Play</a>
+            <a class="btn" href="../ranking/ranking.html">High Scores</a>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</body>
+</html>

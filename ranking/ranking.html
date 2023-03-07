@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking</title>
+    <link rel="stylesheet" href="ranking.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="finalScore"> 
+            <h1 id="finalScore">Ranking Top 5</h1>
+
+            <div id="highScoreList">
+            </div>
+
+            <div class="btn">
+                <button class="button"><a href="../home/index.html">Home</a></button>
+                <button class="button"><a href="../play/level.html">Play again</a></button>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript -->
+    <script>
+        const highScoreList = document.getElementById("highScoreList");
+        const highScore = JSON.parse(localStorage.getItem("highScore")) || [];
+
+        highScoreList.innerHTML = highScore.map(score =>{
+            return `<li class="high-score"> &emsp; ${score.name} - ${score.score}</li>`;
+        }).join("");
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</body>
+</html>

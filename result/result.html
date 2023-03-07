@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="result.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="result.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div id="end">
+            <h1>Your Score</h1>
+            <h1 id="finalScore">0</h1>
+            <form>
+                <input type="text" name="username" id="username" placeholder="&emsp; username">
+                <button type="submit" id="saveScore" onclick="saveHighScore(event)" disabled>Save</button>
+            </form>
+            <div class="btn">
+                <button class="button"><a href="../ranking/ranking.html">Ranking</a></button>
+                <button class="button"><a href="../home/index.html">Home</a></button>
+            </div>   
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</body>
+</html>
